@@ -5,13 +5,20 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
-  path: Test 1
-  label: Test 1
+  path: publications
+  label: Publications
   create: all
   match: "**/*"
 - type: directory
-  path: projects
-  label: Projects
+  path: apropos
+  label: A propos
+  create: all
+  match: "**/*"
+  templates:
+  - author
+- type: directory
+  path: projets
+  label: Projets
   create: documents
   match: "**/*.md"
   templates:
@@ -26,7 +33,6 @@ sections:
 - type: document
   path: data/theme.json
   label: Theme config
-  read_only: false
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
